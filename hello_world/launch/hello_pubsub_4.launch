@@ -1,0 +1,7 @@
+<launch>
+	<node pkg="hello_world" name="helloworld_pub" type="pub_5.py"  output="screen" />
+  <rosparam>
+    helloworld_pub:
+      message: 0.01
+  </rosparam>
+</launch>

@@ -1,0 +1,13 @@
+<launch>
+    <arg name="bag_filename" default="$(find custum_turtlebot3)/bag/my_data.bag"/>
+    <arg name="use_sim_time" value="true"/>
+    <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping">
+        <rosparam>
+            particles:50
+        </rosparam>
+        <remap from="scan" to="/front/scan"/>
+    </node>
+
+    <node name="playbag" pkg="rosbag" type="play" args="--clock -r 1.0 $(arg bag_filename)" />
+    <node name="rviz" pkg="rviz" type="rviz" required="true" args="-d $(find custum_turtlebot3)/rviz/gmapping.rviz" />
+</launch>

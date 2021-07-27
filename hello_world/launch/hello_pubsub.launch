@@ -1,0 +1,4 @@
+<launch>
+	<node pkg="hello_world" name="helloworld_pub" type="publisher.py"  output="screen" />
+	<node pkg="hello_world" name="helloworld_sub" type="subscriber.py" output="screen" />
+</launch>

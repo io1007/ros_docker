@@ -1,0 +1,12 @@
+base_local_planner: base_local_planner/TrajectoryPlannerROS
+TrajectoryPlannerROS:
+    max_vel_x: 0.825
+    min_vel_x: -0.5
+    max_rotational_vel: 0.2
+    min_in_place_rotational_vel: 1.04
+
+    acc_lim_x: 2.0
+    acc_lim_y: 0.0
+    acc_lim_theta: 4.0
+
+    holonomic_robot: false
